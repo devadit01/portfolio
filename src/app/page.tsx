@@ -33,7 +33,8 @@ import {
   AlertCircle,
   Send,
   Workflow,
-  MonitorPlay
+  MonitorPlay,
+  Network
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -748,7 +749,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {/* Service 1 */}
           <div className="card-hover group flex h-full flex-col bg-white p-8 rounded-3xl border border-slate-200 shadow-sm transition-all hover:border-[#AD262D]/30 hover:shadow-md">
             <div className="flex items-center gap-4">
@@ -756,8 +757,8 @@ export default function Home() {
                 <Brain className="w-7 h-7" />
               </div>
               <div>
-                <h3 className="font-serif text-xl font-bold text-slate-900">Generative AI Development</h3>
-                <p className="text-sm font-medium text-[#AD262D]">Intelligent apps powered by LLMs.</p>
+                <h3 className="font-serif text-lg font-bold text-slate-900 leading-tight">Generative AI Development</h3>
+                <p className="text-sm font-medium text-[#AD262D] mt-1">Intelligent apps powered by LLMs.</p>
               </div>
             </div>
             <p className="mt-5 flex-1 text-sm leading-relaxed text-slate-600">
@@ -765,11 +766,14 @@ export default function Home() {
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {["LangGraph", "GraphRAG", "OpenAI", "Claude", "Python"].map(tech => (
-                <span key={tech} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-mono text-slate-600">
+                <span key={tech} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[10px] font-mono text-slate-600">
                   {tech}
                 </span>
               ))}
             </div>
+            <a href="mailto:dev.adit01@gmail.com?subject=Inquiry%20regarding%20Generative%20AI%20Development&body=Hi%20Aditya%2C%0A%0AI%20need%20you%20to%20work%20on%20an%20idea%20related%20to%20Generative%20AI%20Development.%20Here%20is%20a%20brief%20overview%3A" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#AD262D] transition-colors hover:text-slate-900">
+              Hire for Gen AI <ArrowRight className="h-4 w-4" />
+            </a>
           </div>
 
           {/* Service 2 */}
@@ -779,8 +783,8 @@ export default function Home() {
                 <Workflow className="w-7 h-7" />
               </div>
               <div>
-                <h3 className="font-serif text-xl font-bold text-slate-900">Agentic Automations</h3>
-                <p className="text-sm font-medium text-[#AD262D]">Autonomous systems for complex tasks.</p>
+                <h3 className="font-serif text-lg font-bold text-slate-900 leading-tight">Agentic Automations</h3>
+                <p className="text-sm font-medium text-[#AD262D] mt-1">Autonomous systems for tasks.</p>
               </div>
             </div>
             <p className="mt-5 flex-1 text-sm leading-relaxed text-slate-600">
@@ -788,11 +792,14 @@ export default function Home() {
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {["CrewAI", "LangChain", "n8n", "FastAPI"].map(tech => (
-                <span key={tech} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-mono text-slate-600">
+                <span key={tech} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[10px] font-mono text-slate-600">
                   {tech}
                 </span>
               ))}
             </div>
+            <a href="mailto:dev.adit01@gmail.com?subject=Inquiry%20regarding%20Agentic%20Automations&body=Hi%20Aditya%2C%0A%0AI%20need%20you%20to%20work%20on%20an%20idea%20related%20to%20Agentic%20Automations.%20Here%20is%20a%20brief%20overview%3A" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#AD262D] transition-colors hover:text-slate-900">
+              Hire for Automations <ArrowRight className="h-4 w-4" />
+            </a>
           </div>
 
           {/* Service 3 */}
@@ -802,8 +809,8 @@ export default function Home() {
                 <Code2 className="w-7 h-7" />
               </div>
               <div>
-                <h3 className="font-serif text-xl font-bold text-slate-900">Full-Stack Engineering</h3>
-                <p className="text-sm font-medium text-[#AD262D]">Scalable, modern web platforms.</p>
+                <h3 className="font-serif text-lg font-bold text-slate-900 leading-tight">Full-Stack Engineering</h3>
+                <p className="text-sm font-medium text-[#AD262D] mt-1">Scalable, modern web platforms.</p>
               </div>
             </div>
             <p className="mt-5 flex-1 text-sm leading-relaxed text-slate-600">
@@ -811,11 +818,14 @@ export default function Home() {
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {["Next.js", "React", "Node.js", "PostgreSQL", "TypeScript"].map(tech => (
-                <span key={tech} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-mono text-slate-600">
+                <span key={tech} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[10px] font-mono text-slate-600">
                   {tech}
                 </span>
               ))}
             </div>
+            <a href="mailto:dev.adit01@gmail.com?subject=Inquiry%20regarding%20Full-Stack%20Engineering&body=Hi%20Aditya%2C%0A%0AI%20need%20you%20to%20work%20on%20an%20idea%20related%20to%20Full-Stack%20Engineering.%20Here%20is%20a%20brief%20overview%3A" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#AD262D] transition-colors hover:text-slate-900">
+              Hire for Full-Stack <ArrowRight className="h-4 w-4" />
+            </a>
           </div>
 
           {/* Service 4 */}
@@ -825,8 +835,8 @@ export default function Home() {
                 <MonitorPlay className="w-7 h-7" />
               </div>
               <div>
-                <h3 className="font-serif text-xl font-bold text-slate-900">Computer Vision & Data</h3>
-                <p className="text-sm font-medium text-[#AD262D]">Turning pixels into insights.</p>
+                <h3 className="font-serif text-lg font-bold text-slate-900 leading-tight">Computer Vision & Data</h3>
+                <p className="text-sm font-medium text-[#AD262D] mt-1">Turning pixels into insights.</p>
               </div>
             </div>
             <p className="mt-5 flex-1 text-sm leading-relaxed text-slate-600">
@@ -834,11 +844,66 @@ export default function Home() {
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {["OpenCV", "YOLO", "PyTorch", "Data Pipelines"].map(tech => (
-                <span key={tech} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-mono text-slate-600">
+                <span key={tech} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[10px] font-mono text-slate-600">
                   {tech}
                 </span>
               ))}
             </div>
+            <a href="mailto:dev.adit01@gmail.com?subject=Inquiry%20regarding%20Computer%20Vision%20%26%20Data&body=Hi%20Aditya%2C%0A%0AI%20need%20you%20to%20work%20on%20an%20idea%20related%20to%20Computer%20Vision%20%26%20Data.%20Here%20is%20a%20brief%20overview%3A" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#AD262D] transition-colors hover:text-slate-900">
+              Hire for Vision <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+
+          {/* Service 5 */}
+          <div className="card-hover group flex h-full flex-col bg-white p-8 rounded-3xl border border-slate-200 shadow-sm transition-all hover:border-[#AD262D]/30 hover:shadow-md">
+            <div className="flex items-center gap-4">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-50 text-slate-600 transition-colors group-hover:bg-[#AD262D]/10 group-hover:text-[#AD262D]">
+                <TerminalIcon className="w-7 h-7" />
+              </div>
+              <div>
+                <h3 className="font-serif text-lg font-bold text-slate-900 leading-tight">API & Backend Systems</h3>
+                <p className="text-sm font-medium text-[#AD262D] mt-1">Robust, high-performance backends.</p>
+              </div>
+            </div>
+            <p className="mt-5 flex-1 text-sm leading-relaxed text-slate-600">
+              Architecting secure and scalable RESTful APIs, microservices, and webhook integrations to power your frontends and third-party services.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {["FastAPI", "Express", "Python", "REST", "WebSockets"].map(tech => (
+                <span key={tech} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[10px] font-mono text-slate-600">
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <a href="mailto:dev.adit01@gmail.com?subject=Inquiry%20regarding%20API%20%26%20Backend%20Systems&body=Hi%20Aditya%2C%0A%0AI%20need%20you%20to%20work%20on%20an%20idea%20related%20to%20API%20%26%20Backend%20Systems.%20Here%20is%20a%20brief%20overview%3A" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#AD262D] transition-colors hover:text-slate-900">
+              Hire for Backend <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+
+          {/* Service 6 */}
+          <div className="card-hover group flex h-full flex-col bg-white p-8 rounded-3xl border border-slate-200 shadow-sm transition-all hover:border-[#AD262D]/30 hover:shadow-md">
+            <div className="flex items-center gap-4">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-50 text-slate-600 transition-colors group-hover:bg-[#AD262D]/10 group-hover:text-[#AD262D]">
+                <Network className="w-7 h-7" />
+              </div>
+              <div>
+                <h3 className="font-serif text-lg font-bold text-slate-900 leading-tight">Data Engineering Pipelines</h3>
+                <p className="text-sm font-medium text-[#AD262D] mt-1">Foundations for intelligent AI.</p>
+              </div>
+            </div>
+            <p className="mt-5 flex-1 text-sm leading-relaxed text-slate-600">
+              Creating extraction, transformation, and ingestion pipelines to feed your AI applications, including Vector Database management and data scraping.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {["Pinecone", "ChromaDB", "ETL", "Web Scraping", "Python"].map(tech => (
+                <span key={tech} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[10px] font-mono text-slate-600">
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <a href="mailto:dev.adit01@gmail.com?subject=Inquiry%20regarding%20Data%20Engineering%20Pipelines&body=Hi%20Aditya%2C%0A%0AI%20need%20you%20to%20work%20on%20an%20idea%20related%20to%20Data%20Engineering%20Pipelines.%20Here%20is%20a%20brief%20overview%3A" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#AD262D] transition-colors hover:text-slate-900">
+              Hire for Data Pipelines <ArrowRight className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </section>
