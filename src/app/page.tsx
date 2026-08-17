@@ -31,7 +31,9 @@ import {
   Zap,
   Loader2,
   AlertCircle,
-  Send
+  Send,
+  Workflow,
+  MonitorPlay
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -734,6 +736,111 @@ export default function Home() {
             </CardContent>
           </Card>
         </motion.div>
+      </section>
+
+      {/* 7.5 SERVICES SECTION */}
+      <section id="services" className="relative py-28 px-4 md:px-8 max-w-7xl mx-auto border-t border-slate-200">
+        <div className="mb-16 text-center">
+          <span className="text-xs uppercase tracking-widest text-[#AD262D] font-bold mb-2 block font-mono">services.yml</span>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 font-serif text-slate-900">What I Do</h2>
+          <p className="text-slate-500 max-w-2xl mx-auto text-lg">
+            Specialized engineering services tailored to bring intelligent, scalable products to life.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {/* Service 1 */}
+          <div className="card-hover group flex h-full flex-col bg-white p-8 rounded-3xl border border-slate-200 shadow-sm transition-all hover:border-[#AD262D]/30 hover:shadow-md">
+            <div className="flex items-center gap-4">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-50 text-slate-600 transition-colors group-hover:bg-[#AD262D]/10 group-hover:text-[#AD262D]">
+                <Brain className="w-7 h-7" />
+              </div>
+              <div>
+                <h3 className="font-serif text-xl font-bold text-slate-900">Generative AI Development</h3>
+                <p className="text-sm font-medium text-[#AD262D]">Intelligent apps powered by LLMs.</p>
+              </div>
+            </div>
+            <p className="mt-5 flex-1 text-sm leading-relaxed text-slate-600">
+              Designing and building RAG pipelines, GraphRAG systems, and AI applications grounded in your custom data. Turning AI hype into measurable product value.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {["LangGraph", "GraphRAG", "OpenAI", "Claude", "Python"].map(tech => (
+                <span key={tech} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-mono text-slate-600">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Service 2 */}
+          <div className="card-hover group flex h-full flex-col bg-white p-8 rounded-3xl border border-slate-200 shadow-sm transition-all hover:border-[#AD262D]/30 hover:shadow-md">
+            <div className="flex items-center gap-4">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-50 text-slate-600 transition-colors group-hover:bg-[#AD262D]/10 group-hover:text-[#AD262D]">
+                <Workflow className="w-7 h-7" />
+              </div>
+              <div>
+                <h3 className="font-serif text-xl font-bold text-slate-900">Agentic Automations</h3>
+                <p className="text-sm font-medium text-[#AD262D]">Autonomous systems for complex tasks.</p>
+              </div>
+            </div>
+            <p className="mt-5 flex-1 text-sm leading-relaxed text-slate-600">
+              Creating multi-agent architectures that reason, plan, and execute workflows to automate cognitive tasks, document processing, and decision support.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {["CrewAI", "LangChain", "n8n", "FastAPI"].map(tech => (
+                <span key={tech} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-mono text-slate-600">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Service 3 */}
+          <div className="card-hover group flex h-full flex-col bg-white p-8 rounded-3xl border border-slate-200 shadow-sm transition-all hover:border-[#AD262D]/30 hover:shadow-md">
+            <div className="flex items-center gap-4">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-50 text-slate-600 transition-colors group-hover:bg-[#AD262D]/10 group-hover:text-[#AD262D]">
+                <Code2 className="w-7 h-7" />
+              </div>
+              <div>
+                <h3 className="font-serif text-xl font-bold text-slate-900">Full-Stack Engineering</h3>
+                <p className="text-sm font-medium text-[#AD262D]">Scalable, modern web platforms.</p>
+              </div>
+            </div>
+            <p className="mt-5 flex-1 text-sm leading-relaxed text-slate-600">
+              Building end-to-end applications from responsive frontends to robust, high-performance API backends engineered for speed, security, and scale.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {["Next.js", "React", "Node.js", "PostgreSQL", "TypeScript"].map(tech => (
+                <span key={tech} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-mono text-slate-600">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Service 4 */}
+          <div className="card-hover group flex h-full flex-col bg-white p-8 rounded-3xl border border-slate-200 shadow-sm transition-all hover:border-[#AD262D]/30 hover:shadow-md">
+            <div className="flex items-center gap-4">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-50 text-slate-600 transition-colors group-hover:bg-[#AD262D]/10 group-hover:text-[#AD262D]">
+                <MonitorPlay className="w-7 h-7" />
+              </div>
+              <div>
+                <h3 className="font-serif text-xl font-bold text-slate-900">Computer Vision & Data</h3>
+                <p className="text-sm font-medium text-[#AD262D]">Turning pixels into insights.</p>
+              </div>
+            </div>
+            <p className="mt-5 flex-1 text-sm leading-relaxed text-slate-600">
+              Developing vision models, object detection pipelines, and custom dataset generation algorithms for intelligent monitoring and analysis.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {["OpenCV", "YOLO", "PyTorch", "Data Pipelines"].map(tech => (
+                <span key={tech} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-mono text-slate-600">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* 8. CONTACT SECTION - Terminal & Compose Script */}
