@@ -220,6 +220,14 @@ export default function Home() {
     }
   };
 
+  const handleHireClick = (serviceName: string) => {
+    setContactForm(prev => ({
+      ...prev,
+      message: `Hi Aditya,\n\nI need you to work on an idea related to ${serviceName}. Here is a brief overview:\n`
+    }));
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="relative min-h-screen bg-background text-foreground scroll-smooth">
       
@@ -771,9 +779,9 @@ export default function Home() {
                 </span>
               ))}
             </div>
-            <a href="mailto:dev.adit01@gmail.com?subject=Inquiry%20regarding%20Generative%20AI%20Development&body=Hi%20Aditya%2C%0A%0AI%20need%20you%20to%20work%20on%20an%20idea%20related%20to%20Generative%20AI%20Development.%20Here%20is%20a%20brief%20overview%3A" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#AD262D] transition-colors hover:text-slate-900">
+            <button onClick={() => handleHireClick("Generative AI Development")} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#AD262D] transition-colors hover:text-slate-900 cursor-pointer text-left">
               Hire for Gen AI <ArrowRight className="h-4 w-4" />
-            </a>
+            </button>
           </div>
 
           {/* Service 2 */}
@@ -797,9 +805,9 @@ export default function Home() {
                 </span>
               ))}
             </div>
-            <a href="mailto:dev.adit01@gmail.com?subject=Inquiry%20regarding%20Agentic%20Automations&body=Hi%20Aditya%2C%0A%0AI%20need%20you%20to%20work%20on%20an%20idea%20related%20to%20Agentic%20Automations.%20Here%20is%20a%20brief%20overview%3A" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#AD262D] transition-colors hover:text-slate-900">
+            <button onClick={() => handleHireClick("Agentic Automations")} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#AD262D] transition-colors hover:text-slate-900 cursor-pointer text-left">
               Hire for Automations <ArrowRight className="h-4 w-4" />
-            </a>
+            </button>
           </div>
 
           {/* Service 3 */}
@@ -823,9 +831,9 @@ export default function Home() {
                 </span>
               ))}
             </div>
-            <a href="mailto:dev.adit01@gmail.com?subject=Inquiry%20regarding%20Full-Stack%20Engineering&body=Hi%20Aditya%2C%0A%0AI%20need%20you%20to%20work%20on%20an%20idea%20related%20to%20Full-Stack%20Engineering.%20Here%20is%20a%20brief%20overview%3A" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#AD262D] transition-colors hover:text-slate-900">
+            <button onClick={() => handleHireClick("Full-Stack Engineering")} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#AD262D] transition-colors hover:text-slate-900 cursor-pointer text-left">
               Hire for Full-Stack <ArrowRight className="h-4 w-4" />
-            </a>
+            </button>
           </div>
 
           {/* Service 4 */}
@@ -849,9 +857,9 @@ export default function Home() {
                 </span>
               ))}
             </div>
-            <a href="mailto:dev.adit01@gmail.com?subject=Inquiry%20regarding%20Computer%20Vision%20%26%20Data&body=Hi%20Aditya%2C%0A%0AI%20need%20you%20to%20work%20on%20an%20idea%20related%20to%20Computer%20Vision%20%26%20Data.%20Here%20is%20a%20brief%20overview%3A" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#AD262D] transition-colors hover:text-slate-900">
+            <button onClick={() => handleHireClick("Computer Vision & Data")} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#AD262D] transition-colors hover:text-slate-900 cursor-pointer text-left">
               Hire for Vision <ArrowRight className="h-4 w-4" />
-            </a>
+            </button>
           </div>
 
           {/* Service 5 */}
@@ -875,9 +883,9 @@ export default function Home() {
                 </span>
               ))}
             </div>
-            <a href="mailto:dev.adit01@gmail.com?subject=Inquiry%20regarding%20API%20%26%20Backend%20Systems&body=Hi%20Aditya%2C%0A%0AI%20need%20you%20to%20work%20on%20an%20idea%20related%20to%20API%20%26%20Backend%20Systems.%20Here%20is%20a%20brief%20overview%3A" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#AD262D] transition-colors hover:text-slate-900">
+            <button onClick={() => handleHireClick("API & Backend Systems")} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#AD262D] transition-colors hover:text-slate-900 cursor-pointer text-left">
               Hire for Backend <ArrowRight className="h-4 w-4" />
-            </a>
+            </button>
           </div>
 
           {/* Service 6 */}
@@ -901,9 +909,9 @@ export default function Home() {
                 </span>
               ))}
             </div>
-            <a href="mailto:dev.adit01@gmail.com?subject=Inquiry%20regarding%20Data%20Engineering%20Pipelines&body=Hi%20Aditya%2C%0A%0AI%20need%20you%20to%20work%20on%20an%20idea%20related%20to%20Data%20Engineering%20Pipelines.%20Here%20is%20a%20brief%20overview%3A" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#AD262D] transition-colors hover:text-slate-900">
+            <button onClick={() => handleHireClick("Data Engineering Pipelines")} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#AD262D] transition-colors hover:text-slate-900 cursor-pointer text-left">
               Hire for Data Pipelines <ArrowRight className="h-4 w-4" />
-            </a>
+            </button>
           </div>
         </div>
       </section>
