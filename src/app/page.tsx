@@ -47,6 +47,7 @@ import { portfolioProjects } from "@/data/projects";
 import { ProjectPresentationModal, ProjectData } from "@/components/project-presentation-modal";
 import { cn } from "@/lib/utils";
 import { LotusLogo } from "@/components/lotus-logo";
+import { Hero3DEmblem } from "@/components/logo-3d/hero-3d-emblem";
 
 // Custom initial logo svg
 const LogoSvg = () => (
@@ -171,6 +172,7 @@ const skillsCategories = [
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
+  const [heroTab, setHeroTab] = useState<"code" | "3d">("code");
 
   // Maps showcase project ID to matching custom terminal filenames
   const projectFilenames: Record<string, string> = {
@@ -178,7 +180,6 @@ export default function Home() {
     "churn-predictor": "churn_risk_model.py",
     "studypoint": "studypoint_portal.py",
     "edurag": "graphrag_benchmark.py",
-    "vigilant": "crisis_dispatch_agent.py",
     "webforge": "monorepo_boilerplate.sh",
     "salesforce": "sales_funnel_viz.py"
   };
@@ -246,12 +247,13 @@ export default function Home() {
                 </svg>
               </div>
               
-              <div className="inline-flex items-center gap-2 text-xl font-medium text-slate-500 mb-2">
-                Hello! I Am
+              <div className="inline-flex items-center gap-3 text-xl font-medium text-slate-500 mb-2">
+                <span>Hello! I Am</span>
+                <LotusLogo size={34} className="shadow-none" glow={true} />
               </div>
-              <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 font-serif leading-none flex flex-wrap items-center gap-3">
-                <span className="text-[#AD262D]">Aditya Anil Kokate</span>
-                <LotusLogo size={42} className="shadow-none inline-flex" />
+              <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 font-serif leading-tight">
+                <span className="text-[#AD262D]">Aditya Anil</span>{" "}
+                <span className="text-slate-900">Kokate</span>
               </h1>
             </div>
 
@@ -285,33 +287,80 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Column: Code Editor showing profile information */}
+          {/* Right Column: Code Editor showing profile information & 3D Emblem showcase */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="code-editor">
-              <div className="window-controls bg-slate-50 border-b border-slate-200 flex justify-between items-center">
+            <div className="code-editor shadow-lg border border-slate-200 rounded-2xl overflow-hidden bg-white">
+              <div className="window-controls bg-slate-50 border-b border-slate-200 flex justify-between items-center px-4 py-2.5">
                 <div className="flex gap-1.5">
                   <div className="dot red"></div>
                   <div className="dot yellow"></div>
                   <div className="dot green"></div>
                 </div>
-                <span className="text-xs font-mono text-slate-400">profile.js</span>
-                <div className="w-10"></div>
+
+                {/* Tabs to switch between Code and 3D Emblem */}
+                <div className="flex items-center gap-1 bg-slate-200/80 p-0.5 rounded-lg text-xs font-mono">
+                  <button
+                    type="button"
+                    onClick={() => setHeroTab("code")}
+                    className={cn(
+                      "px-3 py-1 rounded-md transition-all cursor-pointer font-medium",
+                      heroTab === "code"
+                        ? "bg-white text-slate-900 shadow-xs"
+                        : "text-slate-600 hover:text-slate-900"
+                    )}
+                  >
+                    profile.js
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setHeroTab("3d")}
+                    className={cn(
+                      "px-3 py-1 rounded-md transition-all cursor-pointer flex items-center gap-1.5 font-medium",
+                      heroTab === "3d"
+                        ? "bg-white text-slate-900 shadow-xs"
+                        : "text-slate-600 hover:text-slate-900"
+                    )}
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#AD262D] animate-pulse" />
+                    <span>3D Emblem (Three.js)</span>
+                  </button>
+                </div>
+
+                <div className="w-8"></div>
               </div>
 
-              <div className="code-block font-mono bg-white text-slate-700">
-                <span className="code-line"><span className="line-number">1</span><span className="keyword">const</span> <span className="variable">profile</span> <span className="operator">=</span> &#123;</span>
-                <span className="code-line"><span className="line-number">2</span>  <span className="property">name</span>: <span className="string">"Aditya Anil Kokate"</span>,</span>
-                <span className="code-line"><span className="line-number">3</span>  <span className="property">role</span>: <span className="string">"Agentic AI Engineer"</span>,</span>
-                <span className="code-line"><span className="line-number">4</span>  <span className="property">education</span>: <span className="string">"Computer Engineering (AISSMS IOIT, 2026)"</span>,</span>
-                <span className="code-line"><span className="line-number">5</span>  <span className="property">internship</span>: <span className="string">"NavonLabs Pvt Ltd"</span>,</span>
-                <span className="code-line"><span className="line-number">6</span>  <span className="property">skills</span>: [</span>
-                <span className="code-line"><span className="line-number">7</span>    <span className="string">"LangGraph"</span>, <span className="string">"GraphRAG"</span>, <span className="string">"FastAPI"</span>, <span className="string">"Next.js"</span></span>
-                <span className="code-line"><span className="line-number">8</span>  ],</span>
-                <span className="code-line"><span className="line-number">9</span>  <span className="property">hardWorker</span>: <span className="boolean">true</span>,</span>
-                <span className="code-line"><span className="line-number">10</span>  <span className="property">quickLearner</span>: <span className="boolean">true</span>,</span>
-                <span className="code-line"><span className="line-number">11</span>  <span className="property">openToWork</span>: <span className="boolean">true</span></span>
-                <span className="code-line"><span className="line-number">12</span>&#125;;</span>
-              </div>
+              {heroTab === "code" ? (
+                <div className="relative code-block font-mono bg-white text-slate-700 p-6">
+                  {/* Floating interactive 3D logo in top right */}
+                  <div className="absolute top-4 right-4 hidden sm:flex items-center gap-2 bg-slate-50/80 backdrop-blur-xs p-1.5 pr-2.5 rounded-full border border-slate-200 shadow-xs hover:border-[#AD262D]/40 transition-colors">
+                    <LotusLogo size={24} className="shadow-none" />
+                    <button
+                      type="button"
+                      onClick={() => setHeroTab("3d")}
+                      className="text-[11px] font-mono text-slate-500 hover:text-[#AD262D] cursor-pointer"
+                    >
+                      Inspect 3D
+                    </button>
+                  </div>
+
+                  <span className="code-line"><span className="line-number">1</span><span className="keyword">const</span> <span className="variable">profile</span> <span className="operator">=</span> &#123;</span>
+                  <span className="code-line"><span className="line-number">2</span>  <span className="property">name</span>: <span className="string">"Aditya Anil Kokate"</span>,</span>
+                  <span className="code-line"><span className="line-number">3</span>  <span className="property">role</span>: <span className="string">"Agentic AI Engineer"</span>,</span>
+                  <span className="code-line"><span className="line-number">4</span>  <span className="property">education</span>: <span className="string">"Computer Engineering (AISSMS IOIT, 2026)"</span>,</span>
+                  <span className="code-line"><span className="line-number">5</span>  <span className="property">internship</span>: <span className="string">"NavonLabs Pvt Ltd"</span>,</span>
+                  <span className="code-line"><span className="line-number">6</span>  <span className="property">skills</span>: [</span>
+                  <span className="code-line"><span className="line-number">7</span>    <span className="string">"LangGraph"</span>, <span className="string">"GraphRAG"</span>, <span className="string">"FastAPI"</span>, <span className="string">"Next.js"</span></span>
+                  <span className="code-line"><span className="line-number">8</span>  ],</span>
+                  <span className="code-line"><span className="line-number">9</span>  <span className="property">hardWorker</span>: <span className="boolean">true</span>,</span>
+                  <span className="code-line"><span className="line-number">10</span>  <span className="property">quickLearner</span>: <span className="boolean">true</span>,</span>
+                  <span className="code-line"><span className="line-number">11</span>  <span className="property">openToWork</span>: <span className="boolean">true</span></span>
+                  <span className="code-line"><span className="line-number">12</span>&#125;;</span>
+                </div>
+              ) : (
+                <div className="p-2 bg-slate-950">
+                  <Hero3DEmblem />
+                </div>
+              )}
             </div>
           </div>
         </div>

@@ -1,8 +1,6 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { LotusLogo } from "@/components/lotus-logo";
@@ -70,7 +68,7 @@ export function Navbar() {
           className="p-1 rounded-full bg-white/85 backdrop-blur-xl border border-slate-200 shadow-md hover:scale-105 transition-transform flex items-center justify-center cursor-pointer"
           title="Aditya Kokate"
         >
-          <LotusLogo size={28} className="shadow-none" />
+          <LotusLogo size={32} className="shadow-none" glow={true} />
         </a>
         <nav className="flex items-center gap-1 p-1.5 rounded-full bg-white/85 backdrop-blur-xl border border-slate-200 shadow-md">
           {navItems.map((item) => {

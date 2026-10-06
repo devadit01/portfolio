@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   title: "Aditya Kokate",
   description: "Portfolio of Aditya Anil Kokate - Building production-ready AI systems powered by LLMs, Agentic Workflows, GraphRAG, and Computer Vision.",
   icons: {
-    icon: "/navonlabs.png",
-    shortcut: "/navonlabs.png",
-    apple: "/navonlabs.png",
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
 };
 

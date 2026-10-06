@@ -1,29 +1,35 @@
 import React from "react";
-import Image from "next/image";
+import { Logo3D } from "@/components/logo-3d/logo-3d";
 import { cn } from "@/lib/utils";
 
-interface LotusLogoProps {
+export interface LotusLogoProps {
   className?: string;
   size?: number;
   alt?: string;
+  interactive?: boolean;
+  glow?: boolean;
 }
 
-export function LotusLogo({ className, size = 38, alt = "NavonLabs Logo" }: LotusLogoProps) {
+export function LotusLogo({
+  className,
+  size = 38,
+  alt = "Aditya Kokate Gothic Chrome 3D Logo",
+  interactive = true,
+  glow = false,
+}: LotusLogoProps) {
   return (
     <span
       className={cn(
-        "relative inline-flex items-center justify-center transition-transform hover:scale-105 select-none",
+        "relative inline-flex items-center justify-center transition-transform select-none",
         className
       )}
-      style={{ width: `${Math.round(size * 1.35)}px`, height: `${size}px` }}
     >
-      <Image
-        src="/navonlabs.png"
+      <Logo3D
+        size={size}
         alt={alt}
-        width={120}
-        height={80}
-        className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal"
-        priority
+        interactive={interactive}
+        glow={glow}
+        speed={1.0}
       />
     </span>
   );
@@ -36,3 +42,5 @@ export function NavonLogo(props: LotusLogoProps) {
 export function LotusIcon(props: LotusLogoProps) {
   return <LotusLogo {...props} />;
 }
+
+export { Logo3D };

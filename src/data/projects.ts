@@ -126,37 +126,7 @@ export const portfolioProjects: ProjectData[] = [
       "Inspect logs and output metrics in outputs/ directory"
     ]
   },
-  {
-    id: "vigilant",
-    name: "Vigilant v2.0 — Disaster Response",
-    category: "Multimodal Agentic Crisis System",
-    description: "An autonomous agentic framework designed to filter social media noise, validate satellite imagery shifts, and incorporate live weather feeds for rapid emergency dispatch.",
-    image: "/images/vigilant_dashboard.png",
-    tech: ["Python 3.10", "DistilBERT", "CLIP-ViT", "PyTorch", "NetworkX", "MongoDB", "Streamlit"],
-    database: {
-      engine: "MongoDB Document Database",
-      description: "Stores unstructured live disaster event feeds, historical geo-polygons, weather severity metrics, and Tier-based trust scores.",
-      models: ["CrisisFeedCollection", "GeoPolygonIndex", "TrustTierLogs"]
-    },
-    architecture: [
-      "Ingests social media streams, satellite GeoTIFF files, and IMD weather data.",
-      "Phase 1 Sequential Quality Gates filter noise (Language, Text Coherence, Disaster Relevance).",
-      "Phase 2 Parallel Enrichment Engine runs CLIP vision classification, satellite change detection, and weather checks concurrently.",
-      "Multimodal Fusion Core calculates final severity, confidence, and urgency metrics.",
-      "Assigns Tier 1-4 Trust Classification and updates live command dashboard."
-    ],
-    features: [
-      "Sequential Quality Gates (Early Noise Rejection)",
-      "Parallel Processing via ThreadPoolExecutor",
-      "PyTorch Siamese Satellite Change Detection",
-      "Multimodal Urgency Scoring Engine",
-      "Tier 1-4 Operational Trust Classification"
-    ],
-    execution: [
-      "Specification documented in d:\\projects\\vigil\\docc.txt",
-      "Run simulation pipeline with Python 3.10+"
-    ]
-  },
+
   {
     id: "webforge",
     name: "WebForge Full-Stack Starter",
